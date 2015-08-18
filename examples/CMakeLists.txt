@@ -1,6 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
-foreach(TARGET poisson-regression tag-bilstm embed-cl encdec xor xor-xent rnnlm-aevb rnnlm nlm textcat rnnlm2 mp)
+foreach(TARGET poisson-regression tag-bilstm embed-cl encdec get_monolingual_dict xor xor-xent rnnlm-aevb rnnlm-args rnnlm nlm n_best_words parallel-encdec score_parallel_encdec score_rnnlm-args get_char_embeddings textcat rnnlm2)
   ADD_EXECUTABLE(${TARGET} ${TARGET}.cc)
   target_link_libraries(${TARGET} cnn ${LIBS})
   if (WITH_CUDA_BACKEND)
